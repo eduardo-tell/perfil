@@ -1,0 +1,33 @@
+{
+  "devDependencies": {
+    "browser-sync": "latest",
+    "check-pages": "latest",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-jshint": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-strip-debug": "latest",
+    "gulp-uglify": "latest",
+    "gulp-watch": "latest"
+  },
+  "name": "framework-e-learning",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Leonardo Koslowski",
+  "license": "ISC",
+  "description": "Framework e-learning",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "natives": "^1.1.6",
+    "slick-carousel": "^1.8.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://bitbucket.org:dotgroup/framework-e-learning.git"
+  },
+  "homepage": "https://bitbucket.org/dotgroup/framework-e-learning#readme"
+}

@@ -1,0 +1,202 @@
+/* 
+    ### fontes ###
+*/
+
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('../../font/OpenSans-Bold.ttf');
+    src: url('../../font/OpenSans-Bold?#iefix') format('embedded-opentype'),
+      url('../../font/OpenSans-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+@font-face {
+    font-family: 'opensansRegular';
+    src: url('../../font/opensansRegular.ttf');
+    src: url('../../font/opensansRegular?#iefix') format('embedded-opentype'),
+      url('../../font/opensansRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} 
+
+h1{
+    font-size: 8rem
+}
+
+h2{
+    font-size: 5rem;
+}
+
+p{
+    font-size: 1.5rem;
+    font-family: 'opensansRegular';
+}
+
+/*  #### Imagens ####  */
+
+img {
+    width: inherit;
+    height: inherit;
+}
+
+section.linguas{
+    position: absolute;
+    right: 10px;
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    grid-gap: 10px;
+}
+
+section.linguas a{
+    width: 50px;
+    height: 50px;
+}
+ 
+/*  #### Efeitos ####  */
+@-webkit-keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+}
+@keyframes slide-in-elliptic-top-fwd {
+    0% {
+      -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+              transform: translateY(-600px) rotateX(-30deg) scale(0);
+      -webkit-transform-origin: 50% 100%;
+              transform-origin: 50% 100%;
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0) rotateX(0) scale(1);
+              transform: translateY(0) rotateX(0) scale(1);
+      -webkit-transform-origin: 50% 1400px;
+              transform-origin: 50% 1400px;
+      opacity: 1;
+    }
+}
+
+/* ### Basico ### */
+
+*, body{
+    font-family: 'OpenSans-Bold';
+    font-weight: 100 !important;
+    font-size: 12px;
+    margin: 0 auto;
+    color: white
+}
+
+svg {
+    fill: currentColor;
+    height: 2rem;
+    width: 2rem;
+}
+
+/* ### Conteúdo ### */
+
+.titulo{
+    font-family: 'OpenSans-Bold';
+    color: white;
+    z-index: 2;
+    -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.container {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.conteudo-descricao {
+    position: relative;
+    display: grid;
+    background: url(../../img/image-02.jpg) center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    height: 70vh;
+    align-content: center;
+}
+
+.descricao {
+    max-width: 750px;
+    margin: 0 auto;
+    z-index: 3;
+}
+ 
+.bkg-parallax-01 {
+    display: grid;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    transform: translateZ(-0.9px) scale(2);
+    background: url(../../img/image-01.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-color: #fae4d8;
+    align-content: center;
+}
+  
+.bkg-parallax-01:after, .conteudo-descricao:after{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    content: '';
+    position: absolute;
+    opacity: 0.5;
+    z-index: 1;
+    top: 0;
+}
+
+/* ### Rodapé ### */
+
+footer{
+    display: grid;
+    width: 100%;
+    z-index: 3;
+    opacity: 0.7; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;   
+}
+
+footer a{
+    height: 2.3rem;
+    padding: 5px;
+    display: block;
+    text-align: center
+}
+
+footer a#verde{
+    background-color: green;
+    width: 100%;
+}
+
+footer a#azul-claro{
+    background-color: #006699;
+    width: 100%;
+}
+
+footer a#cinza{
+    background-color: black;
+    width: 100%;
+}
+
+footer a#colorido{
+    background-color: #EB159B;
+    width: 100%;
+}
