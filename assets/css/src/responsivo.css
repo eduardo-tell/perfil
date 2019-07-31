@@ -8,9 +8,9 @@
 @media only screen and (max-width: 500px) {
     *, body{
         font-size: 10px;
-    }
+    } 
  
     .conteudo-descricao{
         height: auto;
     } 
-}
+} 
