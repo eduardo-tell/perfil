@@ -1,7 +1,11 @@
+window.onload = function(){
+  traduz('pt');
+}
+
 function traduz(lingua){
     removeAtivo();
     if(lingua == 'pt'){
-      document.getElementsByClassName("descricao")[0].innerHTML = `<h2>Resumso</h2><p>Atuo na área de desenvolvimento web a mais de 6 anos, com experiência sólida nas principais tecnologias de desenvolvimento Front-End, hoje atuo na empresa DOT Digital Group como Web Developer Sênior.</p><p>Atualmente estou cursando graduação no último ano em Sistemas de Informação e também varios outros cursos técnicos na área.</p>`;                  
+      document.getElementsByClassName("descricao")[0].innerHTML = `<h2>Resumo</h2><p>Atuo na área de desenvolvimento web a mais de 6 anos, com experiência sólida nas principais tecnologias de desenvolvimento Front-End, hoje atuo na empresa DOT Digital Group como Web Developer Pleno.</p><p>Atualmente cursando graduação no último ano em Sistemas de Informação, como vários outros cursos técnicos na área.</p>`;                  
       itemParaAtivar = 1;
     } else if(lingua == 'es') {
       document.getElementsByClassName("descricao")[0].innerHTML = `<h2>Resumen</h2><p>He estado trabajando en el área de desarrollo web durante más de 6 años, con una sólida experiencia en las principales tecnologías de desarrollo de front end, hoy trabajo en DOT Digital Group como Desarrollador Web Senior.</p><p>Actualmente estoy estudiando pregrado en el último año en Sistemas de información y también en varios otros cursos técnicos en el área.</p>`;
