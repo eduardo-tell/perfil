@@ -1,34 +1,37 @@
 {
+  "name": "perfil",
+  "version": "1.0.0",
+  "description": "Meu perfil pessoal",
+  "main": "gulpfile.babel.js",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/register": "^7.11.5",
     "browser-sync": "latest",
     "check-pages": "latest",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
     "gulp-concat": "latest",
     "gulp-jshint": "latest",
-    "gulp-clean-css": "latest",
     "gulp-strip-debug": "latest",
     "gulp-uglify": "latest",
     "gulp-watch": "latest"
   },
-  "name": "framework-e-learning",
-  "version": "0.0.1",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp server"
-  },
-  "author": "Leonardo Koslowski",
-  "license": "ISC",
-  "description": "Framework e-learning",
-  "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "natives": "^1.1.6",
-    "slick-carousel": "^1.8.1"
+    "test": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git://bitbucket.org:dotgroup/framework-e-learning.git"
+    "url": "git+https://github.com/eduardo-tell/perfil.git"
   },
-  "homepage": "https://bitbucket.org/dotgroup/framework-e-learning#readme"
+  "author": "Eduardo Tell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardo-tell/perfil/issues"
+  },
+  "homepage": "https://github.com/eduardo-tell/perfil#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.11.5",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
 }
