@@ -14,7 +14,8 @@
     "gulp-jshint": "latest",
     "gulp-strip-debug": "latest",
     "gulp-uglify": "latest",
-    "gulp-watch": "latest"
+    "gulp-watch": "latest",
+    "node-sass": "^5.0.0"
   },
   "scripts": {
     "test": "gulp"
@@ -32,6 +33,7 @@
   "dependencies": {
     "@babel/preset-env": "^7.11.5",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "sass-convert": "^0.5.2"
   }
 }
