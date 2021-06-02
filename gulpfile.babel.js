@@ -8,6 +8,7 @@ exports.sass = () => (
     .pipe(sass({outputStyle: 'compressed', errLogToConsole: true }))
     .pipe(concat('global.min.css'))
     .pipe(gulp.dest('./dist/css'))
+    .pipe(browserSync.stream())
 );
 
 gulp.task('watch', () => {
@@ -25,7 +26,7 @@ gulp.task('serve', () => {
     });
 
     gulp.watch('./assets/scss/**', gulp.series('sass'))
-    gulp.watch('./**/**/**').on('change', browserSync.reload);
+    gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', gulp.series('watch'));
+gulp.task('default', gulp.series('serve'));
