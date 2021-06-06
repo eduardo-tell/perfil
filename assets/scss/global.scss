@@ -149,17 +149,18 @@ $md: 1264px;
 $lg: 1904px;
 $xl: 1904px;
 
+:root {
+    --primary: #000;
+    --secundary: #444444;
+    --tertiary: #a3f7bf;
+    --bgdefault: #fcfcfc;
+}
+
 @mixin mediaXs () {
     @media (max-width: 600px) {
 
     }
 }
-
-// Colors
-$primary: #000;
-$secundary: #444444;
-$tertiary: #a3f7bf;
-$background: #FCFCFC;
 
 // Vars
 $radius: 40px;
@@ -187,6 +188,7 @@ html {
 // Base
 body {
     margin: 0;
+    font-size: 1rem;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
@@ -218,6 +220,10 @@ p {
     margin-bottom: 1rem;
 }
 
+a {
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
 
@@ -228,7 +234,16 @@ ul {
 
 main {
     align-items: center;
-    background-color: $background;
+    background-color: var(--bgdefault);
+
+    @mixin squareDotted {
+       content: '';
+        display: block;
+        z-index: 1;
+
+        background-repeat: no-repeat;
+        background-image: url("../../dist/img/element-points.svg");
+    }
 
     @media (min-width: 1025px) {
         display: flex;
@@ -284,15 +299,10 @@ main {
 
             &:before,
             &:after {
-                content: '';
                 width: 80px;
                 height: 80px;
-                display: block;
-                z-index: 1;
-
                 background-size: cover;
-                background-repeat: no-repeat;
-                background-image: url("../../dist/img/element-points.svg");
+                @include squareDotted()
             }
 
             &:before {
@@ -332,16 +342,19 @@ main {
         }
 
         .side-bar {
+
+            height: calc(100% - 50px);
+            max-height: 700px;
             @include scroll(#f1f1f1);
             background-color: #393E46;
             transition-duration: 0.5s;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             > .container {
                 text-align: center;
-
-                @media (min-width: 1025px) {
-                    padding: 100px 0 25px 0;
-                }
 
                 @media (max-width: 1025px) {
                     height: 100%;
@@ -376,6 +389,10 @@ main {
                         height: 20px;
                         margin: 35px 5px;
 
+                        &:hover svg {
+                            color: var(--tertiary);
+                        }
+
                         svg {
                             width: inherit;
                             height: inherit;
@@ -395,12 +412,11 @@ main {
 
                     color: #ffff;
                     font-weight: 200;
-                    font-size: 1rem;
 
                     &:hover {
                         color: #444444;
-                        background-color: $tertiary;
-                        border-color: $tertiary;
+                        background-color: var(--tertiary);
+                        border-color: var(--tertiary);
                     }
                 }
 
@@ -442,8 +458,6 @@ main {
             @media (min-width: 1025px) {
                 width: 360px;
                 margin: 25px 0;
-                max-height: 717px;
-                height: calc(100% - 50px);
             }
 
             @media (max-width: 1025px) {
@@ -467,7 +481,8 @@ main {
         .right {
             right: 0;
             width: 100%;
-            height: 100%;
+            height: 95vh;
+            max-height: 800px;
             background-color: #222831;
 
             padding: 5% 5% 0% 5%;
@@ -476,8 +491,7 @@ main {
 
             @include scroll(#393E46);
 
-            @media (min-width: 1024px) {
-                max-height: 650px;
+            @media (min-width: 1025px) {
                 max-width: 700px;
             }
 
@@ -499,12 +513,10 @@ main {
 
                     .title {
                         font-weight: 700;
-                        font-size: 1.6rem;
                     }
 
                     .sub-title {
                         font-weight: 200;
-                        font-size: 0.8rem;
                     }
                 }
 
@@ -513,9 +525,21 @@ main {
                     margin: 50px 0 0 0;
 
                     &__title {
+                        display: inline-block;
+                        position: relative;
                         font-weight: 600;
-                        font-size: 2.5rem;
-                        margin: 0 0 20px 0;
+                        margin: 0 0 15px 0;
+
+                        &:after {
+                            top: 12px;
+                            right: -15px;
+                            position: absolute;
+
+                            width: 25px;
+                            height: 25px;
+                            background-size: 150%;
+                            @include squareDotted();
+                        }
                     }
 
                     &__description {
@@ -530,7 +554,7 @@ main {
                     height: 100%;
                     display: flex;
                     position: relative;
-                    margin: 50px 0 0 0;
+                    margin: 20px 0 0 0;
                     justify-content: space-between;
 
                     @media (min-width: 1024px) {
@@ -592,7 +616,7 @@ main {
                             align-items: center;
                             border-radius: 2px;
                             padding: 4px 2px;
-                            background-color: #A3F7BF;
+                            background-color: var(--tertiary);
                             position: absolute;
 
                             transition-duration: 0.5s;
