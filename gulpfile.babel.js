@@ -2,11 +2,13 @@ import gulp from 'gulp';
 import sass from 'gulp-sass';
 import concat from 'gulp-concat';
 import browserSync from "browser-sync";
+import autoprefixer from "gulp-autoprefixer";
 
 exports.sass = () => (
     gulp.src('./assets/scss/**/**')
     .pipe(sass({outputStyle: 'compressed', errLogToConsole: true }))
     .pipe(concat('global.min.css'))
+    .pipe(autoprefixer('last 2 version'))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream())
 );
