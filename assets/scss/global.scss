@@ -342,7 +342,7 @@ main {
         }
 
         .side-bar {
-            height: auto;
+            height: 90vh;
             @include scroll(#f1f1f1);
             background-color: #393E46;
             transition-duration: 0.5s;
@@ -354,7 +354,6 @@ main {
             @media (min-width: 1025px) {
                 width: 360px;
                 margin: 25px 0;
-                min-height: calc(100% - 50px);
                 max-height: 700px;
             }
 
