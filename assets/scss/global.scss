@@ -661,6 +661,20 @@ main {
                             }
                         }
 
+                        .imagem {
+                            width: 116px;
+                            height: 87px;
+                            display: block;
+                            margin: -2px;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                display: block;
+                            }
+                        }
+
                         &:hover {
                             .portfolio__item--header {
                                 height: 95%;
