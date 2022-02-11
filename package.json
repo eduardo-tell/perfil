@@ -15,7 +15,7 @@
     "gulp-strip-debug": "latest",
     "gulp-uglify": "latest",
     "gulp-watch": "latest",
-    "node-sass": "^5.0.0"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "test": "gulp"
